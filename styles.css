@@ -1,0 +1,81 @@
+/* ===== משתני עיצוב (מתוך הפריים "coming soon" בפיגמה) ===== */
+:root {
+  /* צבעים */
+  --color-pink: #ff0084;      /* רקע העמוד */
+  --color-white: #ffffff;     /* הכותרת */
+  --color-cream: #fbf6f4;     /* המשפט והשם */
+
+  /* פונט */
+  --font-main: "Ploni Round AAA", sans-serif;
+
+  /* גדלי טקסט (בפיגמה: 98.8px ו-28px, מתכווצים במסכים קטנים) */
+  --size-title: clamp(2.75rem, 9vw, 6.176rem);
+  --size-text: clamp(1.125rem, 2.5vw, 1.75rem);
+
+  /* ריווחים */
+  --space-title-to-image: clamp(1.5rem, 5vw, 4.875rem);  /* בפיגמה: ~78px */
+  --space-image-to-text: clamp(1.25rem, 3vw, 2.875rem);  /* בפיגמה: ~46px */
+  --space-page-side: 1.5rem;
+
+  /* גודל התמונה (בפיגמה: 517px רוחב) */
+  --image-width: 517px;
+}
+
+/* ===== פונטים ===== */
+@font-face {
+  font-family: "Ploni Round AAA";
+  src: url("fonts/ploni-round-regular-aaa.otf") format("opentype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ploni Round AAA";
+  src: url("fonts/ploni-round-demibold-aaa.otf") format("opentype");
+  font-weight: 600;
+  font-display: swap;
+}
+
+/* ===== בסיס ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background: var(--color-pink);
+  font-family: var(--font-main);
+  line-height: 1.17;
+}
+
+/* ===== עמוד "בקרוב": מסך אחד, הכול במרכז ===== */
+.coming-soon {
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 2rem var(--space-page-side);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.coming-soon__title {
+  font-size: var(--size-title);
+  font-weight: 600;
+  color: var(--color-white);
+  margin-bottom: var(--space-title-to-image);
+}
+
+.coming-soon__image {
+  display: block;
+  width: min(var(--image-width), 100%);
+  height: auto;
+  margin-bottom: var(--space-image-to-text);
+}
+
+.coming-soon__text {
+  font-size: var(--size-text);
+  font-weight: 400;
+  color: var(--color-cream);
+}
