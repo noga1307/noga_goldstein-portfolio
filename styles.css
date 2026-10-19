@@ -14,7 +14,7 @@
 
   /* ריווחים */
   --space-title-to-image: clamp(1.5rem, 5vw, 4.875rem);  /* בפיגמה: ~78px */
-  --space-image-to-text: clamp(1.25rem, 3vw, 2.875rem);  /* בפיגמה: ~46px */
+  --space-image-to-text: clamp(1.5rem, 5vw, 4.875rem);   /* בפיגמה: ~78px */
   --space-page-side: 1.5rem;
 
   /* גודל התמונה (בפיגמה: 517px רוחב) */
